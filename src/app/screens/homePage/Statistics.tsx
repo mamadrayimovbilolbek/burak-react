@@ -4,7 +4,7 @@ import { Container } from "@mui/material";
 
 export default function Statistics() {
     return (
-        <div>
+        <div className={"static-frame"}>
             <Container> Statistics </Container>
         </div>
     )

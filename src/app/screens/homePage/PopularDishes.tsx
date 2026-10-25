@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 
 export default function PopularDishes() {
     return (
-        <div>
+        <div className={""}>
             <Container> PopularDishes </Container>
         </div>
     )
