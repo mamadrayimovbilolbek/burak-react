@@ -4,7 +4,7 @@ import NewDishes from "./NewDishes";
 import Advertisement from "./Advertisement";
 import ActiveUsers from "./ActiveUsers";
 import PopularDishes from "./PopularDishes";
-import Events from "./Events";
+import Events from "./Events"; //@ts-ignore
 import "../../../css/home.css"
 
 export default function HomePage() {
