@@ -7,8 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./app/MaterialTheme";
-import { BrowserRouter as Router } from "react-router-dom";
-import "./css/index.css";
+import { BrowserRouter as Router } from "react-router-dom"; //@ts-ignore
+import "./css/index.css"; //@ts-ignore
 import "./css/navbar.css"
 
 
