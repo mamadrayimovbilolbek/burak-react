@@ -31,6 +31,9 @@ function App() {
         <Route path="/member-page">
           <UserPage />
         </Route>
+        <Route path="/help">
+          <HelpPage />
+        </Route>
         <Route path="/">
           <HomePage />
         </Route>
