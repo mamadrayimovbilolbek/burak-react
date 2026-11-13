@@ -12,7 +12,7 @@ import HelpPage from "./screens/helpPage"; //@ts-ignore
 import "../css/app.css"; //@ts-ignore
 import "../css/navbar.css"; //@ts-ignore
 import "../css/footer.css";
-import Test from "./screens/Test";
+// import Test from "./screens/Test";
 
 
 
@@ -36,8 +36,8 @@ function App() {
           <HelpPage />
         </Route>
         <Route path="/">
-          <Test />
-          {/* <HomePage /> */}
+          {/* <Test /> */}
+          <HomePage />
         </Route>
       </Switch>
       <Footer />
