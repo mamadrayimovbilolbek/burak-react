@@ -37,7 +37,7 @@ export default function Footer() {
           <Stack sx={{ ml: "288px" }} flexDirection={"row"}>
             <Stack>
               <Box>
-                <Box className={"foot-category-title"}>Bo'limlar</Box>
+                <Box className={"foot-category-title"}>Sections</Box>
                 <Box className={"foot-category-link"}>
                   <Link to="/">Home</Link>
                   <Link to="/products">Products</Link>
@@ -61,7 +61,7 @@ export default function Footer() {
                   </Box>
                   <Box className={"find-us"}>
                     <span>P.</span>
-                    <div>+971 4 554 7777</div>
+                    <div>+971 555 7777</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>E.</span>
