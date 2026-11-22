@@ -10,6 +10,7 @@ import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router } from "react-router-dom"; //@ts-ignore
 import "./css/index.css"; //@ts-ignore
 import "./css/navbar.css"
+import ContextProvider from "./app/context/ContextProvider";
 
 
 const container = document.getElementById("root")!;
@@ -18,12 +19,14 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Router>
-          <App />
-        </Router>
-      </ThemeProvider>
+      <ContextProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <App />
+          </Router>
+        </ThemeProvider>
+      </ContextProvider>
     </Provider>
   </React.StrictMode>
 );

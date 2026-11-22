@@ -3,6 +3,9 @@ import { serverApi } from "../../lib/config";
 import { LoginInput, Member, MemberInput } from "../../lib/types/member";
 
 class MemberService {
+  logout() {
+    throw new Error("Method not implemented.");
+  }
   private readonly path: string;
 
   constructor() {
@@ -65,6 +68,21 @@ class MemberService {
       localStorage.setItem("memberData", JSON.stringify(member));
 
       return member;
+    } catch (err) {
+      console.log("Error, login:", err);
+      throw err;
+    }
+  }
+
+  public async logout(): Promise<boolean> {
+    try {
+      const url = this.path + "/member/logout";
+      const result = await axios.post(url, {}, { withCredentials: true });
+      console.log("logout:", result);
+
+      localStorage.removeItem("memberData");
+
+      return result.data.logout;
     } catch (err) {
       console.log("Error, login:", err);
       throw err;
