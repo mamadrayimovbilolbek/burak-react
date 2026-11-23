@@ -98,7 +98,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
             anchorEl={anchorEl}
             id="account-menu"
             open={Boolean(anchorEl)}
-            onChange={handleCloseLogout}
+            onClose={handleCloseLogout}
             onClick={handleCloseLogout}
             PaperProps={{
               elevation: 0,

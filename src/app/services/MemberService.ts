@@ -3,9 +3,7 @@ import { serverApi } from "../../lib/config";
 import { LoginInput, Member, MemberInput } from "../../lib/types/member";
 
 class MemberService {
-  logout() {
-    throw new Error("Method not implemented.");
-  }
+
   private readonly path: string;
 
   constructor() {
@@ -81,8 +79,6 @@ class MemberService {
       console.log("logout:", result);
 
       localStorage.removeItem("memberData");
-
-      return result.data.logout;
     } catch (err) {
       console.log("Error, login:", err);
       throw err;

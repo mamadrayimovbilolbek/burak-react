@@ -1,7 +1,7 @@
 import { Box, Button, Container, ListItemIcon, Menu, MenuItem, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { CartItem } from "../../../lib/types/search";
 import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
@@ -108,7 +108,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                         anchorEl={anchorEl}
                         id="account-menu"
                         open={Boolean(anchorEl)}
-                        onChange={handleCloseLogout}
+                        onClose={handleCloseLogout}
                         onClick={handleCloseLogout}
                         PaperProps={{
                             elevation: 0,
