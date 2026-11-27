@@ -74,7 +74,21 @@ export function Settings() {
 
   const handleImageViewer = (e: T) => {
     const file = e.target.files[0];
-  }
+    console.log("file:", file);
+
+    const fileType = file.type,
+      validateImageTypes = ["image/jpg", "image/jpeg", "image/png"];
+
+    if (!validateImageTypes.includes(fileType)) {
+      sweetErrorHandling(Messages.error5).then();
+    } else {
+      if (file) {
+        memberUpdateInput.memberImage = file;
+        setMemberUpdateInput({ ...memberUpdateInput });
+        setMemberImage(URL.createObjectURL(file));
+      }
+    }
+  };
 
   return (
     <Box className={"settings"}>
